@@ -9,8 +9,23 @@ body, h1, h2, p, input, textarea, button, a {
     font-family: "Poppins", sans-serif;
 }
 
+#Welcome {
+    position: relative;
+    background: url('banner.jpg') no-repeat center top fixed; /* Updated background positioning */
+    background-size: cover;
+    color: #ffffff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+
+#Welcome h1,
+#Welcome p {
+    color: #ffffff;
+}
+
 h1 {
-    text-shadow: 2px 2px 1px rgb(122, 122, 122);
+    text-shadow: 4px 4px 3px rgb(19, 19, 19);
 }
 
 .btn-primary {
