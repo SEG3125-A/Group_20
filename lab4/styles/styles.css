@@ -19,17 +19,16 @@ h1 {
 }
 
 .btn-primary:hover {
-    background-color: #325743;
+    background-color: #3c6850;
 }
 
 .card.bg-warning {
-    background-color: #18a156;
+    background-color: #18a156 !important;
 }
 
 .card {
     border: none;
 }
-
 
 .card-body {
     background-color: #5abd80;
@@ -38,6 +37,6 @@ h1 {
     font-family: "Poppins", sans-serif;
 }
 
-.form-control mb-2{
+.form-control {
     font-family: "Poppins", sans-serif;
 }
