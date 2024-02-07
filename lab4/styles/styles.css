@@ -9,9 +9,17 @@ body, h1, h2, p, input, textarea, button, a {
     font-family: "Poppins", sans-serif;
 }
 
+.navbar.bg-dark {
+    background-color: #141414 !important; 
+}
+
+.footer {
+    background-color: #141414 !important; 
+}
+
 #Welcome {
     position: relative;
-    background: url('banner.jpg') no-repeat center top fixed; /* Updated background positioning */
+    background: url('banner.jpg') no-repeat center top fixed;
     background-size: cover;
     color: #ffffff;
     text-align: center;
