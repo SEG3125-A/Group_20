@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+
+html {
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+body, h1, h2, p, input, textarea, button, a {
+    font-family: "Poppins", sans-serif;
+}
+
+h1 {
+    text-shadow: 2px 2px 1px rgb(122, 122, 122);
+}
+
+.btn-primary {
+    background-color: #18a156;
+    border-color: #18a156;
+}
+
+.btn-primary:hover {
+    background-color: #325743;
+}
+
+.card.bg-warning {
+    background-color: #18a156;
+}
+
+.card {
+    border: none;
+}
+
+
+.card-body {
+    background-color: #5abd80;
+    border-radius: 5px;
+    color: black;
+    font-family: "Poppins", sans-serif;
+}
+
+.form-control mb-2{
+    font-family: "Poppins", sans-serif;
+}

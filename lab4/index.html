@@ -4,17 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bicycle Repair Shop</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link href="styles/styles.css" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">BikeShop</a>
     </nav>
 
-    <div class="container mt-5">
+    <div class="container mt-5" id="Welcome">
         <h1>Welcome to BikeShop</h1>
         <p>Your one-stop shop for all bicycle repair needs.</p>
+    </div>
+
+    <div class="container mt-5">
 
         <h2>Services</h2>
         <p>Detailing our repair services...</p>
@@ -26,10 +29,56 @@
             <textarea class="form-control mb-2" placeholder="Service Required" required></textarea>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+    </div>
 
+    <div class="container">
+        <h2>More information</h2>
+        <a href="#mechanics" class="btn btn-primary btn-block" data-toggle="collapse">Meet our mechanics</a>
+        <div id="mechanics" class="collapse row">
+            <div class="col-3 mb-3">
+                <div class="card bg-warning" style="width:200px">
+                    <img class="card-img-top" src="styles/Erwind.jpg" alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title">Erwind</h4>
+                        <p class="card-text">Erwind knows all about bikes.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 mb-3">
+                <div class="card bg-warning" style="width:200px">
+                    <img class="card-img-top" src="styles/Erwind.jpg" alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title">Erwind</h4>
+                        <p class="card-text">Erwind knows all about bikes.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 mb-3">
+                <div class="card bg-warning" style="width:200px">
+                    <img class="card-img-top" src="styles/Erwind.jpg" alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title">Erwind</h4>
+                        <p class="card-text">Erwind knows all about bikes.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 mb-3">
+                <div class="card bg-warning" style="width:200px">
+                    <img class="card-img-top" src="styles/Erwind.jpg" alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title">Erwind</h4>
+                        <p class="card-text">Erwind knows all about bikes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
         <h2>Contact Us</h2>
         <p>How to reach us...</p>
     </div>
+    
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
