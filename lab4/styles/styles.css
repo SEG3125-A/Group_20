@@ -27,9 +27,14 @@ body, h1, h2, p, input, textarea, button, a {
 }
 
 
-#Welcome h1,
+#Welcome h1{
+    color: #ffffff;
+    text-shadow: 4px 4px 3px rgb(19, 19, 19);
+}
+
 #Welcome p {
     color: #ffffff;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
 
 h1 {
@@ -37,12 +42,23 @@ h1 {
 }
 
 .btn-primary {
-    background-color: #18a156;
-    border-color: #18a156;
+    background-color: rgb(95, 145, 112);
+    border-color: rgb(95, 145, 112);
+}
+
+#appointment-box .btn-primary{
+    background-color: #0f0f0f;
+    border-color: #222222;
+}
+
+#appointment-box .btn-primary:hover{
+    background-color: #11bd5e;
+    border-color: #11bd5e;
 }
 
 .btn-primary:hover {
-    background-color: #3c6850;
+    background-color: #1b5e39;
+    border-color: #1b5e39;
 }
 
 .card.bg-warning {
@@ -54,12 +70,24 @@ h1 {
 }
 
 .card-body {
-    background-color: #5abd80;
+    background-color: rgb(22, 22, 22);
     border-radius: 5px;
-    color: black;
+    color: white;
     font-family: "Poppins", sans-serif;
+}
+
+.footer .card-body{
+    background-color: rgb(92, 122, 102);
+    color: black;
 }
 
 .form-control {
     font-family: "Poppins", sans-serif;
+}
+
+#appointment-box {
+    background-color: rgb(95, 145, 112);
+    padding: 15px;
+    border-radius: 10px;
+    color: black;
 }
