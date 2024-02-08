@@ -28,7 +28,7 @@
         <div class="row">
             <div class="col-3">
                 <div class="card bg-warning" style="width:250px">
-                    <img class="card-img-top" src="styles/Erwind.jpg" alt="Card image" style="width:100%">
+                    <img class="card-img-top" src="styles/tune.jpg" alt="Card image" style="width:100%">
                     <div class="card-body">
                         <h4 class="card-title">Basic Tune-Up</h4>
                         <p class="card-text">Essential maintenance for optimal performance.</p>
@@ -38,7 +38,7 @@
 
             <div class="col-3">
                 <div class="card bg-warning" style="width:250px">
-                    <img class="card-img-top" src="styles/Erwind.jpg" alt="Card image" style="width:100%">
+                    <img class="card-img-top" src="styles/tire.jpg" alt="Card image" style="width:100%">
                     <div class="card-body">
                         <h4 class="card-title">Flat Tire Repair</h4>
                         <p class="card-text">Quick tire fixes to keep you rolling.</p>
@@ -48,7 +48,7 @@
 
             <div class="col-3">
                 <div class="card bg-warning" style="width:250px">
-                    <img class="card-img-top" src="styles/Erwind.jpg" alt="Card image" style="width:100%">
+                    <img class="card-img-top" src="styles/chain.jpg" alt="Card image" style="width:100%">
                     <div class="card-body">
                         <h4 class="card-title">Chain Replacement</h4>
                         <p class="card-text">Smoother rides.</p>
@@ -58,7 +58,7 @@
 
             <div class="col-3">
                 <div class="card bg-warning" style="width:250px">
-                    <img class="card-img-top" src="styles/Erwind.jpg" alt="Card image" style="width:100%">
+                    <img class="card-img-top" src="styles/safety-first.jpg" alt="Card image" style="width:100%">
                     <div class="card-body">
                         <h4 class="card-title">Safety Inspection</h4>
                         <p class="card-text">Comprehensive check for secure biking.</p>
@@ -77,7 +77,7 @@
         <div id="mechanics" class="collapse row">
             <div class="col-3 mb-3">
                 <div class="card bg-warning" style="width:250px">
-                    <img class="card-img-top" src="styles/Erwind.jpg" alt="Card image" style="width:100%">
+                    <img class="card-img-top" src="styles/1_.png" alt="Card image" style="width:100%">
                     <div class="card-body">
                         <h4 class="card-title">Erwind</h4>
                         <p class="card-text">Erwind knows all about bikes.</p>
@@ -86,7 +86,7 @@
             </div>
             <div class="col-3 mb-3">
                 <div class="card bg-warning" style="width:250px">
-                    <img class="card-img-top" src="styles/Erwind.jpg" alt="Card image" style="width:100%">
+                    <img class="card-img-top" src="styles/2_.png" alt="Card image" style="width:100%">
                     <div class="card-body">
                         <h4 class="card-title">Erwind</h4>
                         <p class="card-text">Erwind knows all about bikes.</p>
@@ -95,7 +95,7 @@
             </div>
             <div class="col-3 mb-3">
                 <div class="card bg-warning" style="width:250px">
-                    <img class="card-img-top" src="styles/Erwind.jpg" alt="Card image" style="width:100%">
+                    <img class="card-img-top" src="styles/3_.png" alt="Card image" style="width:100%">
                     <div class="card-body">
                         <h4 class="card-title">Erwind</h4>
                         <p class="card-text">Erwind knows all about bikes.</p>
@@ -104,7 +104,7 @@
             </div>
             <div class="col-3 mb-3">
                 <div class="card bg-warning" style="width:250px">
-                    <img class="card-img-top" src="styles/Erwind.jpg" alt="Card image" style="width:100%">
+                    <img class="card-img-top" src="styles/4_.png" alt="Card image" style="width:100%">
                     <div class="card-body">
                         <h4 class="card-title">Erwind</h4>
                         <p class="card-text">Erwind knows all about bikes.</p>
@@ -115,23 +115,35 @@
     </div>
 
     <!-- appointments -->
-    <div class="container mt-5" id="appointment-box">
+    <div class="container mt-5">
         <h2>Book an Appointment</h2>
-        <form id="bookingForm">
-            <input type="text" class="form-control mb-2" placeholder="Your Name" required>
-            <input type="email" class="form-control mb-2" placeholder="Your Email" required>
+        <div class="container mt-2" id="appointment-box">
+            <div class="container" id="appointment-box-box">
+                <form id="bookingForm">
 
-            <select class="form-control mb-2" required>
-                <option value="" disabled selected>Select a service</option>
-                <option value="Service 1">Basic Tune-Up</option>
-                <option value="Service 2">Flat Tire Repair</option>
-                <option value="Service 3">Chain Replacement</option>
-                <option value="Service 4">Safety Inspection</option>
-            </select>
+                    <input type="text" class="form-control mb-2" placeholder="Your Name" required>
+                    <input type="email" class="form-control mb-2" placeholder="Your Email" required>
+                    
+                    <select class="form-control mb-2" required>
+                        <option value="" disabled selected>Select a service</option>
+                        <option value="Service 1">Basic Tune-Up</option>
+                        <option value="Service 2">Flat Tire Repair</option>
+                        <option value="Service 3">Chain Replacement</option>
+                        <option value="Service 4">Safety Inspection</option>
+                    </select>
+                    
+                    <div class="form-group row">
+                        <div class="container mt-2">
+                            <p style="color: white;">What date?</p>
+                            <input class="form-control" type="datetime-local" value="2024-02-19T13:00:00" id="dateTimeInput">
+                        </div>
+                    </div>
 
-            <textarea class="form-control mb-2" placeholder="Additional Comments?"></textarea>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+                    <textarea class="form-control mb-2" placeholder="Additional Comments?"></textarea>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
     </div>
 
     <!-- contact -->
