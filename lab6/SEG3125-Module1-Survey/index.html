@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+        <title>Lab 1</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .sub-section .square {
+            margin-bottom: 20px;
+        }
+
+        .sub-section .square input[type="text"],
+        .sub-section .square label {
+            font-family: 'Poppins', sans-serif;
+            margin-top: 30px;
+            width: calc(100% - 200px);
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <header>
+        <nav id='menu'>
+            <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+            <ul>
+                <li><a href='http://'>Home</a></li>
+                <li><a class='dropdown-arrow' href='http://'>Contact Me</a>
+                    <ul class='sub-menus'>
+                        <li><a href='https://github.com/Rina-uOttawa/seg3125'>GitHub</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="switch">
+            <div class="flicker"></div>
+            <div class="moon"></div>
+            <div class="sun"></div>
+        </div>
+    </header>
+
+    <section class="main">
+        <div class="main-text">
+
+            <h1>YouTube Survey</h1>
+            <p>We are conducting a survey about Youtube's homepage UI.
+                <br><br>
+                Would you like to participate in our survey?</p>
+
+            <div class="survey-buttons">
+                <button class="survey-button">YES</button>
+                <button class="survey-button" onclick="showNoMessage()">NO</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="cube" id="react"></div>
+            <div class="cube" id="html"></div>
+            <div class="cube" id="css"></div>
+            <div class="cube" id="youtube"></div>
+        </div>
+    </section>
+
+    <div class="toast-container" id="toastContainer">
+        <div class="toast-message" id="noMessage">
+            <p>Ok, thank you! Come back again or let us know if you have any questions.</p>
+            <button class="toast-close-btn" onclick="closeToast()">Close</button>
+        </div>
+    </div>
+
+    <section class="sub-section">
+        <div class="square" id="q1">
+            <h2>Question 1</h2>
+            <p>What do you think about the overall layout and design of the YouTube homepage?</p>
+            <input type="text" id="q1-answer" placeholder="Your answer...">
+        </div>
+        <div class="square" id="q2">
+            <h2>Question 2</h2>
+            <p>How easy is it for you to find and access the content you are interested in on the homepage?</p>
+            <input type="text" id="q2-answer" placeholder="Your answer...">
+        </div>
+        <div class="square" id="q3">
+            <h2>Question 3</h2>
+            <p>Do you find the organization of different sections on the YouTube homepage intuitive? Why or why not?</p>
+            <input type="text" id="q3-answer" placeholder="Your answer...">
+        </div>
+        <div class="square" id="q4">
+            <h2>Question 4</h2>
+            <p>How would you rate the visual appeal of the YouTube homepage? Are there any specific elements you like or dislike?</p>
+            <input type="text" id="q4-answer" placeholder="Your answer...">
+        </div>
+        <div class="square" id="q5">
+            <h2>Question 5</h2>
+            <p>What improvements, if any, would you suggest for enhancing the user experience on the YouTube homepage?</p>
+            <input type="text" id="q5-answer" placeholder="Your answer...">
+        </div>
+        <div class="square" id="q6">
+            <h2>Question 6</h2>
+            <p>Which type of content do you prefer on the YouTube homepage?</p>
+            <br><br>
+            <label for="option1">
+                <input type="radio" id="option1" name="content-type"> Educational
+            </label>
+            <label for="option2">
+                <input type="radio" id="option2" name="content-type"> Entertainment
+            </label>
+            <label for="option3">
+                <input type="radio" id="option3" name="content-type"> News
+            </label>
+        </div>
+        <button onclick="submitResponses()">Submit Responses</button>
+    </section>
+
+    <footer id="footer">
+        <a href="https://github.com/Rina-uOttawa/seg3125/tree/master/SEG3125-Module1-Survey" target="_blank">View Our Repo</a>
+        <h3>Website by: Group 20</h3>
+    </footer>
+
+    <script src="scripts.js"></script>
+
+    <script>
+        function submitResponses() {
+            alert("Responses submitted successfully!");
+        }
+    </script>
+
+</body>
+
+</html>
