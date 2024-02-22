@@ -4,54 +4,28 @@
 <head>
     <meta charset="utf-8">
     <title>Lab 1</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .sub-section .square {
-            margin-bottom: 20px;
-        }
-
-        .sub-section .square input[type="text"],
-        .sub-section .square label {
-            font-family: 'Poppins', sans-serif;
-            margin-top: 30px;
-            width: calc(100% - 200px);
-            padding: 10px;
-            box-sizing: border-box;
-        }
-
-        .no-message {
-            display: none;
-            margin-top: 20px;
-            font-size: 16px;
-            color: red;
-        }
-
-        .instructions {
-            margin-top: 20px;
-            font-size: 16px;
-        }
-    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
     <header>
-        <nav id='menu'>
-            <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
-            <ul>
-                <li><a href='#' onclick='scrollToTop()'>Home</a></li>
-                <li><a class='dropdown-arrow' href='http://'>Contact Me</a>
-                    <ul class='sub-menus'>
-                        <li><a href='https://github.com/rinaxosman/rinaxosman.github.io'>GitHub</a></li>
-                    </ul>
-                </li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #d15d5d;border-radius: 10px;">
+            <a class="navbar-brand" href="#" onclick="scrollToTop()" style="color: black;"><b>Home</b></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/SEG3125-A/Group_20" style="color: white;">GitHub</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
-
+        
         <div class="switch">
             <div class="flicker"></div>
             <div class="moon"></div>
@@ -76,7 +50,7 @@
             <div class="instructions" id="instructionsText" style="display: none;">
                 <p>Great! Please take a moment to analyze the <a href="#" onclick="openScreenshot()">YouTube</a> homepage.
                     Look at the layout, design, and content. Afterward, answer the questions below.</p>
-                <button onclick="closeInstructions()">Close Instructions</button>
+                    <button class="btn btn-info" onclick="closeInstructions()">Close Instructions</button>
             </div>
         </div>
         <div class="hero-image">
@@ -90,9 +64,9 @@
     <section class="sub-section">
         <div class="square" id="q1">
             <h2>Question 1</h2>
-            <p>Choose your preferred theme for the YouTube homepage.</p>
+            <p style="margin: 15px;">Choose your preferred theme for the YouTube homepage.</p>
             <br>
-            <select id="q5-answer">
+            <select id="q5-answer" style="font-family: 'Poppins', sans-serif;">
                 <option value="light">Light</option>
                 <option value="dark">Dark</option>
                 <option value="custom">Custom</option>
@@ -100,14 +74,14 @@
         </div>
         <div class="square" id="q2">
             <h2>Question 2</h2>
-            <p>How easy is it for you to find and access the content you are interested in on the homepage?</p>
+            <p style="margin: 15px;">How easy is it for you to find and access the content you are interested in on the homepage?</p>
             <br>
             <!-- <input type="text" id="q2-answer" placeholder="Your answer..."> -->
-            <input type="number" id="q2-answer" placeholder="Your answer..." min="1" max="10" style="width: 100px;height: 20px;">
+            <input type="number" id="q2-answer" placeholder="1-10" min="1" max="10" style="width: 60px;height: 20px;font-family: 'Poppins', sans-serif;">
         </div>
         <div class="square" id="q3">
             <h2>Question 3</h2>
-            <p>Select the features you frequently use on the YouTube homepage.</p>
+            <p style="margin: 15px;">Select the features you frequently use on the YouTube homepage.</p>
             <br>
             <label for="feature1">
                 <input type="checkbox" id="feature1" name="features"> Trending
@@ -121,7 +95,7 @@
         </div>
         <div class="square" id="q4">
             <h2>Question 4</h2>
-            <p>Which aspect of the YouTube homepage's visual appeal do you find most appealing?</p>
+            <p style="margin: 15px;">Which aspect of the YouTube homepage's visual appeal do you find most appealing?</p>
             <br>
             <label for="aspect1">
                 <input type="radio" id="aspect1" name="visual-appeal"> Color Scheme
@@ -135,7 +109,7 @@
         </div>
         <div class="square" id="q5">
             <h2>Question 5</h2>
-            <p>Which type of content do you prefer on the YouTube homepage?</p>
+            <p style="margin: 15px;">Which type of content do you prefer on the YouTube homepage?</p>
             <br><br>
             <label for="option1">
                 <input type="radio" id="option1" name="content-type"> Educational
@@ -149,7 +123,8 @@
         </div>
         <div class="square" id="q6">
             <h2>Question 6</h2>
-            <p>What improvements, if any, would you suggest for enhancing the user experience on the YouTube homepage?</p>
+            <p style="margin: 15px;">What improvements, if any, would you suggest for enhancing the user experience on the YouTube homepage?</p>
+            <br>
             <input type="text" id="q5-answer" placeholder="Your answer...">
         </div>
         <button onclick="submitResponses()">Submit Responses</button>
@@ -157,55 +132,14 @@
 
 
     <footer id="footer">
-        <a href="https://github.com/rinaxosman/rinaxosman.github.io" target="_blank">View Our Repo</a>
+        <a href="https://github.com/SEG3125-A/Group_20" target="_blank">View Our Repo</a>
         <h3>Website by: Group 20</h3>
     </footer>
 
     <script src="scripts.js"></script>
-
-    <script>
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
-        function showInstructions() {
-            var instructionsText = document.getElementById('instructionsText');
-            instructionsText.style.display = 'block';
-        }
-
-        function closeInstructions() {
-            var instructionsText = document.getElementById('instructionsText');
-            instructionsText.style.display = 'none';
-        }
-
-        function openScreenshot() {
-        window.open('YT-homepage.png', 'YouTube Homepage Screenshot', 'width=800,height=600');
-    }
-
-        function scrollToQuestion() {
-            var question1Top = document.getElementById('q1').offsetTop;
-            window.scrollTo({
-                top: question1Top,
-                behavior: 'smooth'
-            });
-        }
-
-        function showNoMessage() {
-            var noMessageText = document.getElementById('noMessageText');
-            noMessageText.style.display = 'block';
-        }
-
-        function closeToast() {
-            var noMessageText = document.getElementById('noMessageText');
-            noMessageText.style.display = 'none';
-        }
-
-        function submitResponses() {
-            alert("Responses submitted successfully!");
-        }
-    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-GLhlTQ8i0t8MxT8dw9JT0P4SR8FfWrq2JDDc3O+NM5STw8rg2A/OiCPh47M3fuB" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </body>
 
