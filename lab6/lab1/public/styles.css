@@ -4,7 +4,9 @@ html {
     scroll-behavior: smooth;
 }
 
-
+#q6.square-answers{
+    width: 100%;
+}
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -894,7 +896,7 @@ canvas {
     height: auto;
     display: block;
     margin: 0 auto;
-    font-family: 'Poppins', sans-serif; /* Set the font to Poppins */
-    color: black; /* Set the text color to black */
+    font-family: 'Poppins', sans-serif;
+    color: black;
 }
 

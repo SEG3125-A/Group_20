@@ -8,7 +8,7 @@
     ],
     "q4": "Color Scheme",
     "q5": "Educational",
-    "q6": "changed the ID"
+    "q6": "Add Quick Settings Access"
   },
   {
     "id": "2024-02-22-2",
@@ -19,7 +19,7 @@
     ],
     "q4": "Color Scheme",
     "q5": "Educational",
-    "q6": "check the ID"
+    "q6": "Custom Theme Color Picker"
   },
   {
     "id": "2024-02-22-3",
@@ -30,7 +30,7 @@
     ],
     "q4": "Color Scheme",
     "q5": "Educational",
-    "q6": "test"
+    "q6": "Improved Content Recommendations"
   },
   {
     "id": "2024-02-22-4",
@@ -42,7 +42,7 @@
     ],
     "q4": "Color Scheme",
     "q5": "Educational",
-    "q6": "ANSWER"
+    "q6": "Organize Subscriptions by Category"
   },
   {
     "id": "2024-02-22-5",
@@ -53,7 +53,7 @@
     ],
     "q4": "Color Scheme",
     "q5": "Educational",
-    "q6": "Testing responses page"
+    "q6": "No ads PLEASE"
   },
   {
     "id": "2024-02-22-1",
@@ -64,7 +64,7 @@
     ],
     "q4": "Color Scheme",
     "q5": "Entertainment",
-    "q6": "6:54!!"
+    "q6": "I can't find the settings."
   },
   {
     "id": "2024-02-22-2",
@@ -76,7 +76,7 @@
     ],
     "q4": "Color Scheme",
     "q5": "Educational",
-    "q6": "test 928"
+    "q6": "Dark theme toggle button"
   },
   {
     "id": "2024-02-22-3",
@@ -98,6 +98,17 @@
     ],
     "q4": "Layout",
     "q5": "Entertainment",
+    "q6": ""
+  },
+  {
+    "id": "2024-02-22-5",
+    "q1": "custom",
+    "q2": "7",
+    "q3": [
+      "Trending"
+    ],
+    "q4": "Layout",
+    "q5": "News",
     "q6": ""
   }
 ]
