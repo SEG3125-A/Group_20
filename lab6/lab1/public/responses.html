@@ -48,44 +48,93 @@
     <section class="sub-section" id="responsesSection">
 
         <div class="square-answers" id="q1">
-            <h2>Question 1</h2>
+            <!-- <h2>Question 1</h2> -->
+            <h3>1) Choose your preferred theme for the YouTube homepage.</h3>
+            
             <div class="result-container" id="q1Results">
-                <!-- Display the options and corresponding number of responses here -->
+                <div class="stack">
+                    <p id="q1Stack"></p>
+                </div>
             </div>
+        </div>
+
+        <div class="square-answers" id="q1chart">
+            <h3>Question 1</h2>
+            <canvas id="chartQ1"></canvas>
         </div>
 
         <div class="square-answers" id="q2">
-            <h2>Question 2</h2>
+            <!-- <h2>Question 2</h2> -->
+            <h3>2) How easy is it for you to find and access the content you are interested in on the homepage? (1-10)</h3>
+
             <div class="result-container" id="q2Results">
-                <!-- Display the options and corresponding number of responses here -->
+                <div class="stack">
+                    <p id="q2Stack"></p>
+                </div>
             </div>
+        </div>
+
+        <div class="square-answers" id="q2chart">
+            <h3>Question 2</h2>
+            <canvas id="chartQ2"></canvas>
         </div>
 
         <div class="square-answers" id="q3">
-            <h2>Question 3</h2>
+            <!-- <h2>Question 3</h2> -->
+            <h3>3) Select the features you frequently use on the YouTube homepage.</h3>
+
             <div class="result-container" id="q3Results">
-                <!-- Display the options and corresponding number of responses here -->
+                <div class="stack">
+                    <p id="q3Stack"></p>
+                </div>
             </div>
+        </div>
+
+        <div class="square-answers" id="q3chart">
+            <h3>Question 3</h2>
+            <canvas id="chartQ3"></canvas>
         </div>
 
         <div class="square-answers" id="q4">
-            <h2>Question 4</h2>
+            <!-- <h2>Question 4</h2> -->
+            <h3>4) Which aspect of the YouTube homepage's visual appeal do you find most appealing?</h3>
+
             <div class="result-container" id="q4Results">
-                <!-- Display the options and corresponding number of responses here -->
+                <div class="stack">
+                    <p id="q4Stack"></p>
+                </div>
             </div>
+        </div>
+
+        <div class="square-answers" id="q4chart">
+            <h3>Question 4</h2>
+            <canvas id="chartQ4"></canvas>
         </div>
 
         <div class="square-answers" id="q5">
-            <h2>Question 5</h2>
+            <!-- <h2>Question 5</h2> -->
+            <h3>5) Which type of content do you prefer on the YouTube homepage?</h3>
+
             <div class="result-container" id="q5Results">
-                <!-- Display the options and corresponding number of responses here -->
+                <div class="stack">
+                    <p id="q5Stack"></p>
+                </div>
             </div>
         </div>
 
+        <div class="square-answers" id="q5chart">
+            <h3>Question 5</h2>
+            <canvas id="chartQ5"></canvas>
+        </div>
+
         <div class="square-answers" id="q6">
-            <h2>Question 6</h2>
+            <!-- <h2>Question 6</h2> -->
+            <h3>6) What improvements, if any, would you suggest for enhancing the user experience on the YouTube homepage?</h3>
+
             <div class="result-container" id="q6Results">
-                <!-- Display the options and corresponding number of responses here -->
+                <div class="stack">
+                    <p id="q6Stack"></p>
+                </div>
             </div>
         </div>
 
@@ -100,6 +149,133 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="responses.js"></script>
     <script src="scripts.js"></script>
+
+    <script>
+        async function fetchSurveyResults() {
+            try {
+                const response = await fetch('http://localhost:3000/results');
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                console.error('Error fetching JSON:', error);
+            }
+        }
+    
+        async function accumulateResponses(questionNumber, elementId) {
+            const stack = document.getElementById(elementId);
+            const surveyResults = await fetchSurveyResults();
+    
+            if (surveyResults) {
+                const responseCounts = {};
+    
+                surveyResults.forEach(result => {
+                    const response = result[`q${questionNumber}`];
+    
+                    if (!responseCounts[response]) {
+                        responseCounts[response] = 1;
+                    } else {
+                        responseCounts[response]++;
+                    }
+                });
+    
+                for (const [response, count] of Object.entries(responseCounts)) {
+                    const listItem = document.createElement('p');
+                    listItem.textContent = `${response}: ${count}`;
+                    stack.appendChild(listItem);
+                }
+            }
+        }
+    
+        accumulateResponses(1, 'q1Stack');
+        accumulateResponses(2, 'q2Stack');
+        accumulateResponses(3, 'q3Stack');
+        accumulateResponses(4, 'q4Stack');
+        accumulateResponses(5, 'q5Stack');
+        // accumulateResponses(6, 'q6Stack');
+    
+    </script>
+    
+    <script>
+        async function fetchSurveyResults() {
+          try {
+            const response = await fetch('http://localhost:3000/results');
+            const data = await response.json();
+            return data;
+          } catch (error) {
+            console.error('Error fetching JSON:', error);
+          }
+        }
+    
+        async function populateStack(questionNumber, elementId) {
+          const stack = document.getElementById(elementId);
+          const surveyResults = await fetchSurveyResults();
+    
+          if (surveyResults) {
+            surveyResults.forEach(result => {
+              const response = document.createElement('p');
+              response.textContent = result[`q${questionNumber}`];
+              stack.appendChild(response);
+            });
+          }
+        }
+        populateStack(6, 'q6Stack');
+        
+      </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        async function fetchSurveyResults() {
+            try {
+                const response = await fetch('http://localhost:3000/results');
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                console.error('Error fetching JSON:', error);
+            }
+        }
+
+        async function createPieChart(questionNumber, elementId) {
+            const surveyResults = await fetchSurveyResults();
+
+            if (surveyResults) {
+                const responseCounts = {};
+
+                surveyResults.forEach(result => {
+                    const response = result[`q${questionNumber}`];
+
+                    if (!responseCounts[response]) {
+                        responseCounts[response] = 1;
+                    } else {
+                        responseCounts[response]++;
+                    }
+                });
+
+                const labels = Object.keys(responseCounts);
+                const data = Object.values(responseCounts);
+
+                const ctx = document.getElementById(elementId).getContext('2d');
+                const chart = new Chart(ctx, {
+                    type: 'pie',
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            data: data,
+                            backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4CAF50', '#FF9800', '#9C27B0'],
+                        }],
+                    },
+                });
+            }
+        }
+
+        // Call the function for each question
+        createPieChart(1, 'chartQ1');
+        createPieChart(2, 'chartQ2');
+        createPieChart(3, 'chartQ3');
+        createPieChart(4, 'chartQ4');
+        createPieChart(5, 'chartQ5');
+    </script>
+
 
 </body>
 

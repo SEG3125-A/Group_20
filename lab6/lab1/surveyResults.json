@@ -77,5 +77,27 @@
     "q4": "Color Scheme",
     "q5": "Educational",
     "q6": "test 928"
+  },
+  {
+    "id": "2024-02-22-3",
+    "q1": "light",
+    "q2": "10",
+    "q3": [
+      "Recommended"
+    ],
+    "q4": "Typography",
+    "q5": "Entertainment",
+    "q6": "No ads!"
+  },
+  {
+    "id": "2024-02-22-4",
+    "q1": "custom",
+    "q2": "8",
+    "q3": [
+      "Subscriptions"
+    ],
+    "q4": "Layout",
+    "q5": "Entertainment",
+    "q6": ""
   }
 ]
