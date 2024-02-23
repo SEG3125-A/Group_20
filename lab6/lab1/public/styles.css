@@ -14,8 +14,20 @@ body {
     margin-bottom: 20px;
 }
 
+.sub-section .square-answers {
+    margin-bottom: 20px;
+}
+
 .sub-section .square input[type="text"],
 .sub-section .square label {
+    font-family: 'Poppins', sans-serif;
+    width: calc(100% - 200px);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.sub-section .square-answers input[type="text"],
+.sub-section .square-answers label {
     font-family: 'Poppins', sans-serif;
     width: calc(100% - 200px);
     padding: 10px;
@@ -232,15 +244,28 @@ header {
     border-radius: 10px;
 }
 
-#q1{
+.square-answers {
+    width: 98%;
+    margin: 1%;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 10px;
+}
+
+.square #q1{
     height: 300px;
 }
 
-#q2{
+.square #q2{
     height: 300px;
 }
 
 .dark .square {
+    background-color: rgb(29, 29, 29);
+} 
+
+.dark .square-answers {
     background-color: rgb(29, 29, 29);
 }
 
@@ -272,6 +297,7 @@ header {
 .sub-section a {
     font-size: medium;
 }
+
 
 .hero-image {
     position: relative;
@@ -313,7 +339,7 @@ header {
 #html {
     left: 450px;
     bottom: 80px;
-    background-image: url("html-square.png");
+    background-image: url("images/html-square.png");
     background-size: cover;
     background-color: rgb(168, 98, 110);
     box-shadow: -40px 60px 15px rgb(50 50 50/15%);
@@ -322,7 +348,7 @@ header {
 .dark #html {
     left: 450px;
     bottom: 80px;
-    background-image: url("html-square.png");
+    background-image: url("images/html-square.png");
     background-size: cover;
     background-color: rgb(168, 98, 110);
     box-shadow: -40px 60px 15px rgba(0, 0, 0, 0.15);
@@ -339,7 +365,7 @@ header {
 #css {
     left: 250px;
     bottom: 240px;
-    background-image: url("css-square.png");
+    background-image: url("images/css-square.png");
     background-size: cover;
     background-color: rgb(115, 194, 157);
     box-shadow: -60px 60px 15px rgb(50 50 50/15%);
@@ -348,7 +374,7 @@ header {
 .dark #css {
     left: 250px;
     bottom: 240px;
-    background-image: url("css-square.png");
+    background-image: url("images/css-square.png");
     background-size: cover;
     background-color: rgb(115, 194, 157);
     box-shadow: -60px 60px 15px rgba(0, 0, 0, 0.15);
@@ -365,7 +391,7 @@ header {
 #javascript {
     left: 420;
     bottom: 80px;
-    background-image: url("javascript-square.png");
+    background-image: url("images/javascript-square.png");
     background-size: cover;
     background-color: rgb(115, 120, 194);
     box-shadow: -60px 60px 15px rgb(50 50 50/15%);
@@ -374,7 +400,7 @@ header {
 .dark #javascript {
     left: 420;
     bottom: 80px;
-    background-image: url("javascript-square.png");
+    background-image: url("images/javascript-square.png");
     background-size: cover;
     background-color: rgb(115, 120, 194);
     box-shadow: -60px 60px 15px rgba(0, 0, 0, 0.15);
@@ -392,7 +418,7 @@ header {
 #react {
     left: 300px;
     bottom: -80px;
-    background-image: url("google-square.png");
+    background-image: url("images/google-square.png");
     background-size: cover;
     background-color: rgb(43, 93, 112);
     box-shadow: -60px 60px 15px rgb(50 50 50/15%);
@@ -401,7 +427,7 @@ header {
 .dark #react {
     left: 300px;
     bottom: -80px;
-    background-image: url("google-square.png");
+    background-image: url("images/google-square.png");
     background-size: cover;
     background-color: rgb(27, 119, 155);
     box-shadow: -60px 60px 15px rgba(0, 0, 0, 0.15);
@@ -420,7 +446,7 @@ header {
 #python {
     left: 50px;
     bottom: -100px;
-    background-image: url("python-square.png");
+    background-image: url("images/python-square.png");
     background-size: cover;
     background-color: rgb(19, 19, 19);
     box-shadow: -60px 60px 15px rgb(50 50 50/15%);
@@ -429,7 +455,7 @@ header {
 .dark #python {
     left: 50px;
     bottom: -100px;
-    background-image: url("python-square.png");
+    background-image: url("images/python-square.png");
     background-size: cover;
     background-color: rgb(19, 19, 19);
     box-shadow: -60px 60px 15px rgba(0, 0, 0, 0.15);
@@ -446,7 +472,7 @@ header {
 #java {
     left: 450px;
     bottom: 300px;
-    background-image: url("java-square.png");
+    background-image: url("images/java-square.png");
     background-size: cover;
     background-color: rgb(80, 80, 80);
     box-shadow: -60px 60px 15px rgb(50 50 50/15%);
@@ -455,7 +481,7 @@ header {
 .dark #java {
     left: 450px;
     bottom: 300px;
-    background-image: url("java-square.png");
+    background-image: url("images/java-square.png");
     background-size: cover;
     background-color: rgb(19, 19, 19);
     box-shadow: -60px 60px 15px rgba(0, 0, 0, 0.15);
@@ -472,7 +498,7 @@ header {
 #youtube {
     left: 100px;
     bottom: 80px;
-    background-image: url("youtube-square.png");
+    background-image: url("images/youtube-square.png");
     background-size: cover;
     background-color: rgb(153, 35, 35);
     box-shadow: -60px 60px 15px rgb(50 50 50/15%);
@@ -483,7 +509,7 @@ header {
 .dark #youtube {
     left: 100px;
     bottom: 80px;
-    background-image: url("youtube-square.png");
+    background-image: url("images/youtube-square.png");
     background-size: cover;
     background-color: rgb(155, 22, 22);
     box-shadow: -60px 60px 15px rgba(0, 0, 0, 0.15);
@@ -498,6 +524,11 @@ header {
 }
 
 .square:hover{
+    transform: translateY(-10px);
+    transition: 0.3s;
+}
+
+.square-answers:hover{
     transform: translateY(-10px);
     transition: 0.3s;
 }
@@ -576,11 +607,23 @@ body.dark::-webkit-scrollbar-track {
         height: 400px;
     }
 
+    .square-answers {
+        width: 48%;
+        margin: 1%;
+        height: 400px;
+    }
+
     .dark .main-text {
         width: 50%;
     }
 
     .dark .square {
+        width: 48%;
+        margin: 1%;
+        height: 400px;
+    }
+
+    .dark .square-answers {
         width: 48%;
         margin: 1%;
         height: 400px;
@@ -603,11 +646,23 @@ body.dark::-webkit-scrollbar-track {
         height: 400px;
     }
 
+    .square-answers {
+        width: 98%;
+        margin: 1%;
+        height: 400px;
+    }
+
     .dark .main-text {
         width: 100%;
     }
 
     .dark .square {
+        width: 98%;
+        margin: 1%;
+        height: 400px;
+    }
+
+    .dark .square-answers {
         width: 98%;
         margin: 1%;
         height: 400px;
@@ -743,6 +798,11 @@ body.dark::-webkit-scrollbar-track {
 .survey-button:hover {
     transform: scale(1.05);
 }
+
+.viewButton{
+    padding: 10px 20px;
+    background-color: #c42f37; 
+}
   
 #noMessage {
     display: none;
@@ -788,6 +848,22 @@ body.dark::-webkit-scrollbar-track {
     margin-bottom: 15px;
 }
 
+
 .sub-section button:hover {
     transform: scale(1.05);
 }
+
+#viewButton button {
+    border-radius: 10px;
+    background-color: #399c87;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+}
+
+#viewButton button:hover {
+    background-color: rgb(51, 117, 106);
+}
+

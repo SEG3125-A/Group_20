@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Lab 1</title>
+    <title>Lab 6</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,7 +16,7 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-        
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
@@ -25,7 +25,7 @@
                 </ul>
             </div>
         </nav>
-        
+
         <div class="switch">
             <div class="flicker"></div>
             <div class="moon"></div>
@@ -50,7 +50,7 @@
             <div class="instructions" id="instructionsText" style="display: none;">
                 <p>Great! Please take a moment to analyze the <a href="#" onclick="openScreenshot()">YouTube</a> homepage.
                     Look at the layout, design, and content. Afterward, answer the questions below.</p>
-                    <button class="btn btn-info" onclick="closeInstructions()">Close Instructions</button>
+                <button class="btn btn-info" onclick="closeInstructions()">Close Instructions</button>
             </div>
         </div>
         <div class="hero-image">
@@ -66,7 +66,7 @@
             <h2>Question 1</h2>
             <p style="margin: 15px;">Choose your preferred theme for the YouTube homepage.</p>
             <br>
-            <select id="q5-answer" style="font-family: 'Poppins', sans-serif;">
+            <select id="q1-answer" style="font-family: 'Poppins', sans-serif;">
                 <option value="light">Light</option>
                 <option value="dark">Dark</option>
                 <option value="custom">Custom</option>
@@ -76,7 +76,6 @@
             <h2>Question 2</h2>
             <p style="margin: 15px;">How easy is it for you to find and access the content you are interested in on the homepage?</p>
             <br>
-            <!-- <input type="text" id="q2-answer" placeholder="Your answer..."> -->
             <input type="number" id="q2-answer" placeholder="1-10" min="1" max="10" style="width: 60px;height: 20px;font-family: 'Poppins', sans-serif;">
         </div>
         <div class="square" id="q3">
@@ -125,21 +124,25 @@
             <h2>Question 6</h2>
             <p style="margin: 15px;">What improvements, if any, would you suggest for enhancing the user experience on the YouTube homepage?</p>
             <br>
-            <input type="text" id="q5-answer" placeholder="Your answer...">
+            <input type="text" id="q6-answer" placeholder="Your answer...">
         </div>
-        <button onclick="submitResponses()">Submit Responses</button>
+        <button type="button" onclick="submitResponses()">Submit Responses</button>
+        
+    </section>
+
+    <section class="sub-section" id="viewButton">
+        <button type="button" onclick="viewResponsesPrompt()" style="border-radius: 10px;">View Responses</button>
     </section>
 
 
     <footer id="footer">
-        <a href="https://github.com/SEG3125-A/Group_20" target="_blank">View Our Repo</a>
-        <h3>Website by: Group 20</h3>
+        <p>&copy; 2024 YouTube Survey | Designed by Group 20</p>
     </footer>
 
-    <script src="scripts.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-GLhlTQ8i0t8MxT8dw9JT0P4SR8FfWrq2JDDc3O+NM5STw8rg2A/OiCPh47M3fuB" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
 
 </body>
 

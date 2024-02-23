@@ -1,0 +1,22 @@
+{
+  "name": "lab1",
+  "version": "1.0.0",
+  "description": "Updated version of lab 1, for lab 6.",
+  "main": "server/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SEG3125-A/Group_20.git"
+  },
+  "keywords": [
+    "web"
+  ],
+  "author": "Rina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SEG3125-A/Group_20/issues"
+  },
+  "homepage": "https://github.com/SEG3125-A/Group_20#readme"
+}
