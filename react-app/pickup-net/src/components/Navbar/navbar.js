@@ -8,7 +8,7 @@ import { faHome, faFutbol, faTrophy, faCalendar } from '@fortawesome/free-solid-
 
 function Navbar() {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark fixed-top" >
+        <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
             <div className="container">
                 <NavLink className="navbar-brand" to="/">
                     <img src={logo} alt="Logo" width="40" height="40" className="d-inline-block align-top" />
@@ -22,22 +22,22 @@ function Navbar() {
                     <ul className="navbar-nav ms-auto">
                         <li className="nav-item">
                             <NavLink className="nav-link" activeClassName="active" exact to="/">
-                                <FontAwesomeIcon icon={faHome} />Home
+                                <FontAwesomeIcon icon={faHome} style={{ marginRight: '5px' }} />Home
                             </NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink className="nav-link" activeClassName="active" to="/sports">
-                                <FontAwesomeIcon icon={faFutbol} />Sports
+                                <FontAwesomeIcon icon={faFutbol} style={{ marginRight: '5px' }} />Sports
                             </NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink className="nav-link" activeClassName="active" to="/leagues">
-                                <FontAwesomeIcon icon={faTrophy} />Leagues
+                                <FontAwesomeIcon icon={faTrophy} style={{ marginRight: '5px' }} />Leagues
                             </NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink className="nav-link" activeClassName="active" to="/master-schedule">
-                                <FontAwesomeIcon icon={faCalendar} />Master Schedule
+                                <FontAwesomeIcon icon={faCalendar} style={{ marginRight: '5px' }} />Master Schedule
                             </NavLink>
                         </li>
                     </ul>
