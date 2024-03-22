@@ -4,7 +4,7 @@ import './navbar.css';
 import logo from './master_logo.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faFutbol, faTrophy, faCalendar } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faFutbol, faTrophy, faCalendar, faShoppingCart, faUser, faComment } from '@fortawesome/free-solid-svg-icons';
 
 function Navbar() {
     return (
@@ -18,8 +18,8 @@ function Navbar() {
                     <span className="navbar-toggler-icon"></span>
                 </button>
 
-                <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav ms-auto">
+                <div className="collapse navbar-collapse" >
+                    <ul className="navbar-nav ms-auto"id="navbarNav1">
                         <li className="nav-item">
                             <NavLink className="nav-link" activeClassName="active" exact to="/">
                                 <FontAwesomeIcon icon={faHome} style={{ marginRight: '5px' }} />Home
@@ -38,6 +38,25 @@ function Navbar() {
                         <li className="nav-item">
                             <NavLink className="nav-link" activeClassName="active" to="/master-schedule">
                                 <FontAwesomeIcon icon={faCalendar} style={{ marginRight: '5px' }} />Master Schedule
+                            </NavLink>
+                        </li>
+                    </ul>
+                </div>
+                <div className="collapse navbar-collapse" >
+                    <ul className="navbar-nav ms-auto"id="navbarNav2">
+                        <li className="nav-item">
+                            <NavLink className="nav-link" activeClassName="active" to="/forum">
+                                <FontAwesomeIcon icon={faComment} />
+                            </NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link" activeClassName="active" to="/cart">
+                                <FontAwesomeIcon icon={faShoppingCart} />
+                            </NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link" activeClassName="active" to="/login">
+                                <FontAwesomeIcon icon={faUser} />
                             </NavLink>
                         </li>
                     </ul>

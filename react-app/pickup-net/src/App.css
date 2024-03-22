@@ -129,3 +129,13 @@ body::-webkit-scrollbar-thumb {
                      var(--sb-track-color);
   }
 }
+
+.info-icon-button {
+  position: fixed;
+  bottom: 6%;
+  left: 6%;
+  border: none;
+  background-color: transparent;
+  color: #007bff;
+  cursor: pointer;
+}
