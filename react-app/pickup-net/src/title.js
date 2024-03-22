@@ -7,8 +7,8 @@ function Title() {
     <div className="title-container">
       <h1>PICKUP</h1>
       <h1 className="yellow-text">SPORTS</h1>
-      <p>Find casual and competitive matches near you.</p>
-      <p>No commitment.</p>
+      <p style={{ fontSize: 'medium' }}>Find casual and competitive matches near you.</p>
+      <p style={{ fontSize: 'medium' }}>No commitment.</p>
       <ActionButton/>
     </div>
   );
