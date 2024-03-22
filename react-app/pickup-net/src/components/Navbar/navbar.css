@@ -17,7 +17,8 @@ body {
     justify-content: space-between;
     align-items: center;
     color: #ffffff;
-    background-color: #000000;
+    background: rgb(33,33,33);
+    background: radial-gradient(circle, rgba(33,33,33,1) 0%, rgba(5,5,5,1) 100%);
     position: fixed;
     padding: 10px 20px;
     width: 100%;
