@@ -11,6 +11,7 @@
 
 #sign h1{
   font-size: 75px;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.37);
 }
 
 p {
