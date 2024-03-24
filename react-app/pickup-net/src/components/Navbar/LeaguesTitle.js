@@ -1,13 +1,17 @@
 import React from 'react';
 import '../../App.css';
+import data from '../../data.json';
 
-function LeaguesTitle() {
+function LeaguesTitle({ language }) {
+  const { mainTitle, subTitle, description } = data.title.leaguesTitle[language];
+
   return (
     <div className="title-container">
-      <h1>SOCCER</h1>
-      <h1 className="yellow-text">LEAGUES</h1>
-      <p>Find casual and competitive matches near you.</p>
-      <p>COMING SOON.</p>
+      <h1>{mainTitle}</h1>
+      <h1 className="yellow-text">{subTitle}</h1>
+      {description.map((line, index) => (
+        <p key={index}>{line}</p>
+      ))}
     </div>
   );
 }

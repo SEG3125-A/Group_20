@@ -153,3 +153,28 @@ body::-webkit-scrollbar-thumb {
 .buttonChoice{
   margin: 30px;
 }
+
+.toggle-language-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.toggle-language-btn button {
+  background-color: #d0fd1b;
+  color: #000000;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.434);
+}
+
+.toggle-language-btn button:hover {
+  background-color: rgb(211, 211, 211);
+  color: #181818;
+}

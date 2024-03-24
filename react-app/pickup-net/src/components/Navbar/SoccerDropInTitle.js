@@ -1,16 +1,45 @@
 import React from 'react';
-import '../../App.css';
-import ActionButton from '../../ActionButton';
+import data from '../../data.json';
 
-function SoccerDropInTitle() {
-  return (
-    <div className="title-container">
-      <h1>DROP IN</h1>
-      <h1 className="yellow-text">SOCCER</h1>
-      <p>Please select a level.</p>
-      <p><b>As low as 10$.</b></p>
-    </div>
-  );
+function SoccerDropInTitle({ isFrench, pageType }) {
+    let pickupType;
+    if (pageType === 'recreational') {
+        pickupType = data.title.recreationalPickup;
+    } else if (pageType === 'competitive') {
+        pickupType = data.title.competitivePickup;
+    }
+
+    const getTitle = () => {
+        if (isFrench) {
+            return pickupType.french.mainTitle;
+        } else {
+            return pickupType.english.mainTitle;
+        }
+    };
+
+    const getSubtitle = () => {
+        if (isFrench) {
+            return pickupType.french.subTitle;
+        } else {
+            return pickupType.english.subTitle;
+        }
+    };
+
+    const getDescription = () => {
+        if (isFrench) {
+            return pickupType.french.description;
+        } else {
+            return pickupType.english.description;
+        }
+    };
+
+    return (
+        <div className="title-container">
+            <h1>{getTitle()}</h1>
+            {getSubtitle() && <h1 className="yellow-text">{getSubtitle()}</h1>}
+            <h2><i>{getDescription()}</i>.</h2>
+        </div>
+    );
 }
 
 export default SoccerDropInTitle;

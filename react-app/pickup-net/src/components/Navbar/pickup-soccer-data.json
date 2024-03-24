@@ -7,7 +7,17 @@
         "date": "2024-03-20",
         "time": "5:00 PM - 6:30 PM",
         "location": "RA Centre",
-        "cost": "$10"
+        "cost": "$10",
+        "french": {
+            "title": "7v7 Soccer - Mercredi 20 mars",
+            "sport": "Soccer",
+            "level": "Débutant",
+            "gender": "Mixte",
+            "date": "2024-03-20",
+            "time": "17h00 - 18h30",
+            "location": "Centre RA",
+            "cost": "$10"
+        }
     },
     {
         "title": "7v7 Soccer - Thursday March 21st",
@@ -17,7 +27,17 @@
         "date": "2024-03-21",
         "time": "6:30 PM - 8:00 PM",
         "location": "Louis Riel Dome",
-        "cost": "$11"
+        "cost": "$11",
+        "french": {
+            "title": "7v7 Soccer - Jeudi 21 mars",
+            "sport": "Soccer",
+            "level": "Intermédiaire",
+            "gender": "Hommes",
+            "date": "2024-03-21",
+            "time": "18h30 - 20h00",
+            "location": "Dôme Louis Riel",
+            "cost": "$11"
+        }
     },
     {
         "title": "7v7 Soccer - Friday March 22nd",
@@ -27,7 +47,17 @@
         "date": "2024-03-22",
         "time": "7:00 PM - 8:30 PM",
         "location": "Carleton University",
-        "cost": "$12"
+        "cost": "$12",
+        "french": {
+            "title": "7v7 Soccer - Vendredi 22 mars",
+            "sport": "Soccer",
+            "level": "Avancé",
+            "gender": "Mixte",
+            "date": "2024-03-22",
+            "time": "19h00 - 20h30",
+            "location": "Université Carleton",
+            "cost": "$12"
+        }
     },
     {
         "title": "7v7 Soccer - Saturday March 23rd",
@@ -37,7 +67,17 @@
         "date": "2024-03-23",
         "time": "8:00 PM - 9:30 PM",
         "location": "uOttawa Lees Dome",
-        "cost": "$10"
+        "cost": "$10",
+        "french": {
+            "title": "7v7 Soccer - Samedi 23 mars",
+            "sport": "Soccer",
+            "level": "Professionnel",
+            "gender": "Hommes",
+            "date": "2024-03-23",
+            "time": "20h00 - 21h30",
+            "location": "Dôme uOttawa Lees",
+            "cost": "$10"
+        }
     },
     {
         "title": "7v7 Soccer - Sunday March 24th",
@@ -47,7 +87,17 @@
         "date": "2024-03-24",
         "time": "5:30 PM - 7:00 PM",
         "location": "RA Centre",
-        "cost": "$11"
+        "cost": "$11",
+        "french": {
+            "title": "7v7 Soccer - Dimanche 24 mars",
+            "sport": "Soccer",
+            "level": "Débutant",
+            "gender": "Mixte",
+            "date": "2024-03-24",
+            "time": "17h30 - 19h00",
+            "location": "Centre RA",
+            "cost": "$11"
+        }
     },
     {
         "title": "7v7 Soccer - Monday March 25th",
@@ -57,7 +107,17 @@
         "date": "2024-03-25",
         "time": "6:00 PM - 7:30 PM",
         "location": "Louis Riel Dome",
-        "cost": "$12"
+        "cost": "$12",
+        "french": {
+            "title": "7v7 Soccer - Lundi 25 mars",
+            "sport": "Soccer",
+            "level": "Intermédiaire",
+            "gender": "Hommes",
+            "date": "2024-03-25",
+            "time": "18h00 - 19h30",
+            "location": "Dôme Louis Riel",
+            "cost": "$12"
+        }
     },
     {
         "title": "7v7 Soccer - Tuesday March 26th",
@@ -67,7 +127,17 @@
         "date": "2024-03-26",
         "time": "7:30 PM - 9:00 PM",
         "location": "Carleton University",
-        "cost": "$10"
+        "cost": "$10",
+        "french": {
+            "title": "7v7 Soccer - Mardi 26 mars",
+            "sport": "Soccer",
+            "level": "Avancé",
+            "gender": "Mixte",
+            "date": "2024-03-26",
+            "time": "19h30 - 21h00",
+            "location": "Université Carleton",
+            "cost": "$10"
+        }
     },
     {
         "title": "7v7 Soccer - Wednesday March 27th",
@@ -77,7 +147,17 @@
         "date": "2024-03-27",
         "time": "8:30 PM - 10:00 PM",
         "location": "uOttawa Lees Dome",
-        "cost": "$11"
+        "cost": "$11",
+        "french": {
+            "title": "7v7 Soccer - Mercredi 27 mars",
+            "sport": "Soccer",
+            "level": "Professionnel",
+            "gender": "Hommes",
+            "date": "2024-03-27",
+            "time": "20h30 - 22h00",
+            "location": "Dôme uOttawa Lees",
+            "cost": "$11"
+        }
     },
     {
         "title": "7v7 Soccer - Thursday March 28th",
@@ -87,7 +167,17 @@
         "date": "2024-03-28",
         "time": "5:45 PM - 7:15 PM",
         "location": "RA Centre",
-        "cost": "$12"
+        "cost": "$12",
+        "french": {
+            "title": "7v7 Soccer - Jeudi 28 mars",
+            "sport": "Soccer",
+            "level": "Débutant",
+            "gender": "Mixte",
+            "date": "2024-03-28",
+            "time": "17h45 - 19h15",
+            "location": "Centre RA",
+            "cost": "$12"
+        }
     },
     {
         "title": "7v7 Soccer - Friday March 29th",
@@ -97,7 +187,17 @@
         "date": "2024-03-29",
         "time": "6:15 PM - 7:45 PM",
         "location": "Louis Riel Dome",
-        "cost": "$10"
+        "cost": "$10",
+        "french": {
+            "title": "7v7 Soccer - Vendredi 29 mars",
+            "sport": "Soccer",
+            "level": "Intermédiaire",
+            "gender": "Hommes",
+            "date": "2024-03-29",
+            "time": "18h15 - 19h45",
+            "location": "Dôme Louis Riel",
+            "cost": "$10"
+        }
     },
     {
         "title": "7v7 Soccer - Saturday March 30th",
@@ -107,7 +207,17 @@
         "date": "2024-03-30",
         "time": "7:45 PM - 9:15 PM",
         "location": "Carleton University",
-        "cost": "$11"
+        "cost": "$11",
+        "french": {
+            "title": "7v7 Soccer - Samedi 30 mars",
+            "sport": "Soccer",
+            "level": "Avancé",
+            "gender": "Mixte",
+            "date": "2024-03-30",
+            "time": "19h45 - 21h15",
+            "location": "Université Carleton",
+            "cost": "$11"
+        }
     },
     {
         "title": "7v7 Soccer - Sunday March 31st",
@@ -117,7 +227,17 @@
         "date": "2024-03-31",
         "time": "8:15 PM - 9:45 PM",
         "location": "uOttawa Lees Dome",
-        "cost": "$12"
+        "cost": "$12",
+        "french": {
+            "title": "7v7 Soccer - Dimanche 31 mars",
+            "sport": "Soccer",
+            "level": "Professionnel",
+            "gender": "Hommes",
+            "date": "2024-03-31",
+            "time": "20h15 - 21h45",
+            "location": "Dôme uOttawa Lees",
+            "cost": "$12"
+        }
     },
     {
         "title": "7v7 Soccer - Monday April 1st",
@@ -127,7 +247,17 @@
         "date": "2024-04-01",
         "time": "5:15 PM - 6:45 PM",
         "location": "RA Centre",
-        "cost": "$10"
+        "cost": "$10",
+        "french": {
+            "title": "7v7 Soccer - Lundi 1er avril",
+            "sport": "Soccer",
+            "level": "Débutant",
+            "gender": "Mixte",
+            "date": "2024-04-01",
+            "time": "17h15 - 18h45",
+            "location": "Centre RA",
+            "cost": "$10"
+        }
     },
     {
         "title": "7v7 Soccer - Tuesday April 2nd",
@@ -137,7 +267,17 @@
         "date": "2024-04-02",
         "time": "6:45 PM - 8:15 PM",
         "location": "Louis Riel Dome",
-        "cost": "$11"
+        "cost": "$11",
+        "french": {
+            "title": "7v7 Soccer - Mardi 2 avril",
+            "sport": "Soccer",
+            "level": "Intermédiaire",
+            "gender": "Hommes",
+            "date": "2024-04-02",
+            "time": "18h45 - 20h15",
+            "location": "Dôme Louis Riel",
+            "cost": "$11"
+        }
     },
     {
         "title": "7v7 Soccer - Wednesday April 3rd",
@@ -147,6 +287,16 @@
         "date": "2024-04-03",
         "time": "7:15 PM - 8:45 PM",
         "location": "Carleton University",
-        "cost": "$12"
+        "cost": "$12",
+        "french": {
+            "title": "7v7 Soccer - Mercredi 3 avril",
+            "sport": "Soccer",
+            "level": "Avancé",
+            "gender": "Mixte",
+            "date": "2024-04-03",
+            "time": "19h15 - 20h45",
+            "location": "Université Carleton",
+            "cost": "$12"
+        }
     }
 ]

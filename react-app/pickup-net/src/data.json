@@ -1,0 +1,113 @@
+{
+    "title": {
+        "english": {
+            "mainTitle": "PICKUP",
+            "subTitle": "SPORTS",
+            "description": [
+                "Find casual and competitive matches near you.",
+                "No commitment."
+            ],
+            "buttonText": "PLAY WITH US"
+        },
+        "french": {
+            "mainTitle": "SPORTS",
+            "subTitle": "à la carte",
+            "description": [
+                "Trouvez des matchs occasionnels et compétitifs près de chez vous.",
+                "Aucun engagement."
+            ],
+            "buttonText": "JOUEZ AVEC NOUS"
+        },
+        "recreationalPickup": {
+            "english": {
+                "mainTitle": "DROP IN",
+                "subTitle": "SOCCER",
+                "description": "Recreational.",
+                "buttonText": ""
+            },
+            "french": {
+                "mainTitle": "SOCCER",
+                "subTitle": "À LA CARTE",
+                "description": "Récréatif.",
+                "buttonText": ""
+            }
+        },
+        "competitivePickup": {
+            "english": {
+                "mainTitle": "DROP IN",
+                "subTitle": "SOCCER",
+                "description": "Competitive.",
+                "buttonText": ""
+            },
+            "french": {
+                "mainTitle": "SOCCER",
+                "subTitle": "À LA CARTE",
+                "description": "Compétitif.",
+                "buttonText": ""
+            }
+        },
+        "scheduleTitle": {
+            "english": {
+                "mainTitle": "MASTER",
+                "subTitle": "SCHEDULE",
+                "description": [
+                    "Find casual and competitive matches near you, soccer, volleyball, or both.",
+                    "COMING SOON."
+                ]
+            },
+            "french": {
+                "mainTitle": "HORAIRE",
+                "subTitle": "PRINCIPAL",
+                "description": [
+                    "Trouvez des matchs occasionnels et compétitifs près de chez vous, soccer, volleyball, ou les deux.",
+                    "BIENTÔT DISPONIBLE."
+                ]
+            }
+        },
+        "leaguesTitle": {
+            "english": {
+                "mainTitle": "SOCCER",
+                "subTitle": "LEAGUES",
+                "description": [
+                    "Find casual and competitive matches near you.",
+                    "COMING SOON."
+                ]
+            },
+            "french": {
+                "mainTitle": "SOCCER",
+                "subTitle": "LIGUES",
+                "description": [
+                    "Trouvez des matchs occasionnels et",
+                    "compétitifs près de chez vous.",
+                    "BIENTÔT DISPONIBLE."
+                ]
+            }
+        },
+        "notificationForm": {
+            "english": {
+                "title": "Enter your email to be notified:",
+                "buttonText": "Submit",
+                "placeholderText": "Email"
+            },
+            "french": {
+                "title": "Entrez votre adresse e-mail pour être notifié:",
+                "buttonText": "Soumettre",
+                "placeholderText": "Email"
+            }
+        }
+    },
+    "sportsPage": {
+        "english": {
+            "title": "DROP IN",
+            "title2": "SOCCER",
+            "subtitle": "Please select a level.",
+            "priceInfo": "As low as $10."
+        },
+        "french": {
+            "title": "SOCCER",
+            "title2": "À LA CARTE",
+            "subtitle": "Veuillez sélectionner un niveau.",
+            "priceInfo": "À partir de 10$."
+        }
+    }
+}

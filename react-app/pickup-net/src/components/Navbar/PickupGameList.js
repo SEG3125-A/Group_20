@@ -6,8 +6,7 @@ import { Link } from 'react-router-dom';
 import './pickup.css';
 import Cart from './cart.js';
 
-
-function PickupGameList({ games }) {
+function PickupGameList({ games, isFrench, toggleLanguage }) {
     const [cart, setCart] = useState([]);
 
     const addToCart = (game) => {
@@ -31,20 +30,19 @@ function PickupGameList({ games }) {
         <div className="pickup-game-list">
             {games.map((game, index) => (
                 <div key={index} className="pickup-game-item">
-                    <h3>{game.title}</h3>
-                    <p>Sport: {game.sport}</p>
-                    <p>Level: {game.level}</p>
-                    <p>Gender: {game.gender}</p>
-                    <p>Date: {game.date}</p>
-                    <p>Time: {game.time}</p>
-                    <p style={{ color: '#d0fd1b' }}>Location: {game.location}</p>
-                    <p>Cost: {game.cost}</p>
+                    <h3>{isFrench ? game.french.title : game.title}</h3>
+                    <p>{isFrench ? `Sport: ${game.french.sport}` : `Sport: ${game.sport}`}</p>
+                    <p>{isFrench ? `Niveau: ${game.french.level}` : `Level: ${game.level}`}</p>
+                    <p>{isFrench ? `Genre: ${game.french.gender}` : `Gender: ${game.gender}`}</p>
+                    <p>{isFrench ? `Date: ${game.french.date}` : `Date: ${game.date}`}</p>
+                    <p>{isFrench ? `L'heure: ${game.french.time}` : `Time: ${game.time}`}</p>
+                    <p style={{ color: '#d0fd1b' }}>{isFrench ? `Emplacement: ${game.french.location}` : `Location: ${game.location}`}</p>
+                    <p>{isFrench ? `Coût: ${game.french.cost}` : `Cost: ${game.cost}`}</p>
                     <div className="add-to-cart" onClick={() => addToCart(game)}>
                         <FaShoppingCart/>
                     </div>
                 </div>
             ))}
-            {/* <Link className="btn btn-primary" to="/cart">View Cart</Link> */}
         </div>
     );
 }

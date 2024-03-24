@@ -9,6 +9,11 @@ import Cart from './cart.js';
 
 function CompetitivePickup() {
     const [cart, setCart] = useState([]);
+    const [isFrench, setIsFrench] = useState(false);
+
+    const toggleLanguage = () => {
+        setIsFrench(!isFrench);
+    };
 
     const addToCart = (game) => {
         setCart([...cart, game]);
@@ -21,24 +26,23 @@ function CompetitivePickup() {
             <div className="pickup-content">
                 <div id='left-side'>
                     <div id='left-content'>
-                        <div className="title-container">
-                            <h1>DROP IN</h1>
-                            <h1 className="yellow-text">SOCCER</h1>
-                            <h2><i>Competitive</i>.</h2>
+                        <SoccerDropInTitle isFrench={isFrench} pageType="competitive" />
+                        <div className="language-toggle">
+                            <button onClick={toggleLanguage}>
+                                {isFrench ? 'Switch to English' : 'Passer au français'}
+                            </button>
                         </div>
                         <div className='buttonChoice'>
-                            <Link className="btn btn-primary" to="/sports">Back</Link>
+                            <Link className="btn btn-primary" to="/sports">{isFrench ? 'Retour' : 'Back'}</Link>
                         </div>
                     </div>
                 </div>
                 <div id='right-side'>
                     <div className='game-cards'>
-                        {/* Pass the addToCart function as a prop */}
-                        <PickupGameList games={competitiveGames} addToCart={addToCart} />
+                        <PickupGameList games={competitiveGames} addToCart={addToCart} isFrench={isFrench} toggleLanguage={toggleLanguage} />
                     </div>
                 </div>
             </div>
-            {/* Render the Cart component */}
             <Cart cart={cart} />
         </div>
     );
