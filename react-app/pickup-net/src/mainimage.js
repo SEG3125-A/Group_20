@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import mainImage from './styles/images/main.png';
+import mainImage from './styles/images/main.jpg';
 
 
 function Image() {

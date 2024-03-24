@@ -1,0 +1,106 @@
+.page {
+  padding-top: 8%;
+  min-height: 100vh;
+}
+
+.title-container #sign{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#sign h1{
+  font-size: 75px;
+}
+
+p {
+  font-size: 1.08rem;
+}
+
+.loginPage,
+.registerPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  
+  /* background: radial-gradient(circle, rgba(34,34,34,1) 0%, rgba(0,0,0,1) 100%); */
+}
+
+.loginTitle,
+.registerTitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+  color: #ffffff;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.loginForm,
+.registerForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  background-color: rgba(0, 0, 0, 0.279);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.loginForm label,
+.registerForm label {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #d0fd1b;
+}
+
+.loginForm input,
+.registerForm input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #d0fd1b;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.loginBtn,
+.registerBtn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #d0fd1b;
+  color: #000000;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.loginBtn:hover,
+.registerBtn:hover {
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+}
+
+.loginForm p,
+.registerForm p {
+  font-size: 16px;
+  margin-top: 15px;
+  color: #ffffff;
+}
+
+.loginForm p a,
+.registerForm p a {
+  color: #d0fd1b;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}

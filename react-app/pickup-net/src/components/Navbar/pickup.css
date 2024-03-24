@@ -1,0 +1,51 @@
+.pickup-content {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+h2{
+    font-family: 'Poppins', sans-serif;
+}
+
+h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: large;
+    font-weight: bold;
+    color: #d0fd1b;
+}
+
+#left-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.pickup-game-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+#right-side {
+    padding: 20px;
+}
+
+.pickup-title {
+    margin-bottom: 20px;
+}
+
+.pickup-game-item {
+    background-color: rgba(255, 255, 255, 0.272);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: 0.3s ease;
+    text-align: left;
+
+}
+
+.pickup-game-item:hover {
+    transform: scale(1.01);
+}
+

@@ -1,17 +1,17 @@
 import React from 'react';
 import '../../App.css';
-import LeaguesTitle from './LeaguesTitle.js';
+import ForumTitle from './ForumTitle.js';
 import NotificationForm from './NotificationForm'; 
 import './notificationform.css';
 import ActionButton from '../../ActionButton.js';
 
-function Leagues() {
+function Forum() {
   return (
     <div className="dropin-content">
-      <LeaguesTitle/>
+      <ForumTitle/>
       <NotificationForm />
     </div>
   );
 }
 
-export default Leagues;
+export default Forum;
