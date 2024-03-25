@@ -38,7 +38,7 @@ function PickupGameList({ games, isFrench, toggleLanguage }) {
                     <p>{isFrench ? `L'heure: ${game.french.time}` : `Time: ${game.time}`}</p>
                     <p style={{ color: '#d0fd1b' }}>{isFrench ? `Emplacement: ${game.french.location}` : `Location: ${game.location}`}</p>
                     <p>{isFrench ? `Coût: ${game.french.cost}` : `Cost: ${game.cost}`}</p>
-                    <div className="add-to-cart" onClick={() => addToCart(game)}>
+                    <div onClick={() => addToCart(game)} style={{ cursor: 'pointer', display: 'inline-block', background: 'none', border: 'none', padding: 0 }}>
                         <FaShoppingCart/>
                     </div>
                 </div>
