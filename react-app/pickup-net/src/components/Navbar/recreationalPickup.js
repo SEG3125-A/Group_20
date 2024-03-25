@@ -32,6 +32,9 @@ function RecreationalPickup() {
                                 {isFrench ? 'EN' : 'FR'}
                             </button>
                         </div>
+                        <div className='buttonChoice'>
+                            <Link className="btn btn-primary" to="/sports">{isFrench ? 'Retour' : 'Back'}</Link>
+                        </div>
                     </div>
                 </div>
                 <div id='right-side'>
