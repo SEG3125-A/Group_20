@@ -7,7 +7,12 @@ const Register = () => {
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const navigate = useNavigate(); 
+    const navigate = useNavigate();
+    const [language, setLanguage] = useState('english');
+
+    const toggleLanguage = () => {
+        setLanguage(language === 'english' ? 'french' : 'english');
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -57,6 +62,9 @@ const Register = () => {
                     </p>
                 </form>
             </main>
+            <div className='toggle-language-btn'>
+                <button onClick={toggleLanguage}>{language === 'english' ? 'FR' : 'EN'}</button>
+            </div>
         </div>
     );
 };
