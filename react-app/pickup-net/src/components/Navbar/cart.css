@@ -1,0 +1,56 @@
+/* .App {} */
+
+.cartTitle {
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+/* h4 {
+    text-align: center;
+} */
+
+.cartItem {
+    /* margin-bottom: 20px; */
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.432);
+    padding: 20px;
+    border-radius: 10px;
+    transition: ease 0.2s;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.434);
+}
+
+.cartItem:hover {
+    transform: scale(1.01);
+}
+
+.cartItemDetails {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.detail {
+    margin-bottom: 5px;
+}
+
+.removeButton {
+    padding: 5px 10px;
+    background-color: rgb(255, 36, 36);
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.434);
+}
+
+.removeButton:hover{
+    background-color: red;
+}
+
+.shopping-cart {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}

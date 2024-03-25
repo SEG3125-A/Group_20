@@ -42,9 +42,6 @@ function RecreationalPickup() {
                     </div>
                 </div>
             </div>
-            <Routes>
-                <Route path="/cart" element={<Cart/>} />
-            </Routes>
         </div>
     );
 }

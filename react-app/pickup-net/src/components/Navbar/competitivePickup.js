@@ -42,7 +42,6 @@ function CompetitivePickup() {
                     </div>
                 </div>
             </div>
-            <Cart cart={cart} />
         </div>
     );
 }
