@@ -26,9 +26,9 @@ function CompetitivePickup() {
                 <div id='left-side'>
                     <div id='left-content'>
                         <SoccerDropInTitle isFrench={isFrench} pageType="competitive" />
-                        <div className="language-toggle">
+                        <div className="toggle-language-btn">
                             <button onClick={toggleLanguage}>
-                                {isFrench ? 'Switch to English' : 'Passer au français'}
+                                {isFrench ? 'EN' : 'FR'}
                             </button>
                         </div>
                         <div className='buttonChoice'>

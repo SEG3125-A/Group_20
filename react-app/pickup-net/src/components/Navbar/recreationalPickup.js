@@ -7,9 +7,10 @@ import data from './pickup-soccer-data.json';
 import './pickup.css';
 import Cart from './cart.js';
 import '../../data.json';
-import {useCart} from './CartContext'
+import { useCart } from './CartContext'
 
 function RecreationalPickup() {
+    const [language, setLanguage] = useState('english');
     const [isFrench, setIsFrench] = useState(false);
 
     const toggleLanguage = () => {
@@ -25,14 +26,11 @@ function RecreationalPickup() {
             <div className="pickup-content">
                 <div id='left-side'>
                     <div id='left-content'>
-                    <SoccerDropInTitle isFrench={isFrench} pageType="recreational" />
-                        <div className="language-toggle">
+                        <SoccerDropInTitle isFrench={isFrench} pageType="recreational" />
+                        <div className="toggle-language-btn">
                             <button onClick={toggleLanguage}>
-                                {isFrench ? 'Switch to English' : 'Passer au français'}
+                                {isFrench ? 'EN' : 'FR'}
                             </button>
-                        </div>
-                        <div className='buttonChoice'>
-                            <Link className="btn btn-primary" to="/sports">{isFrench ? 'Retour' : 'Back'}</Link>
                         </div>
                     </div>
                 </div>
