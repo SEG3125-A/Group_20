@@ -6,6 +6,7 @@ import PickupGameList from './PickupGameList.js';
 import data from './pickup-soccer-data.json';
 import './pickup.css';
 import Cart from './cart.js';
+import {useCart} from './CartContext'
 
 function CompetitivePickup() {
     const [cart, setCart] = useState([]);
@@ -15,9 +16,7 @@ function CompetitivePickup() {
         setIsFrench(!isFrench);
     };
 
-    const addToCart = (game) => {
-        setCart([...cart, game]);
-    };
+    const { addToCart } = useCart();
 
     const competitiveGames = data.filter(game => game.level === 'Advanced' || game.level === 'Professional');
 

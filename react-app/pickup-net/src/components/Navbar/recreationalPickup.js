@@ -7,18 +7,16 @@ import data from './pickup-soccer-data.json';
 import './pickup.css';
 import Cart from './cart.js';
 import '../../data.json';
+import {useCart} from './CartContext'
 
 function RecreationalPickup() {
-    const [cart, setCart] = useState([]);
     const [isFrench, setIsFrench] = useState(false);
 
     const toggleLanguage = () => {
         setIsFrench(!isFrench);
     };
 
-    const addToCart = (game) => {
-        setCart([...cart, game]);
-    };
+    const { addToCart } = useCart();
 
     const recreationalGames = data.filter(game => game.level === 'Beginner' || game.level === 'Intermediate');
 
@@ -45,7 +43,7 @@ function RecreationalPickup() {
                 </div>
             </div>
             <Routes>
-                <Route path="/cart" element={<Cart cart={cart} />} />
+                <Route path="/cart" element={<Cart/>} />
             </Routes>
         </div>
     );

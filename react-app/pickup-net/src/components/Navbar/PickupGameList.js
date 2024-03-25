@@ -5,26 +5,12 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Link } from 'react-router-dom';
 import './pickup.css';
 import Cart from './cart.js';
+import {useCart} from './CartContext'
 
 function PickupGameList({ games, isFrench, toggleLanguage }) {
     const [cart, setCart] = useState([]);
 
-    const addToCart = (game) => {
-        setCart([...cart, game]);
-        toast.success(`"${game.title}" added to cart successfully!`, {
-            position: "top-center",
-            autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            style: {
-                backgroundColor: 'black',
-                color: 'white'
-            }
-        });
-    };
+    const { addToCart } = useCart();
 
     return (
         <div className="pickup-game-list">

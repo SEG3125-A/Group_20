@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './components/Navbar/navbar.css';
 import './App.css';
+import { CartProvider } from './components/Navbar/CartContext';
 import Navbar from './components/Navbar/navbar.js';
 import HelpIcon from './components/HelpIcon/helpIcon.js';
 import Sports from './components/Navbar/sports.js';
@@ -21,25 +22,27 @@ import Home from './Home.js';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Navbar/>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/sports" element={<Sports/>} />
-          <Route path="/leagues" element={<Leagues/>} /> 
-          <Route path="/master-schedule" element={<MasterSchedule />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/forum" element={<Forum />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/registered" element={<Registered />} />
-          <Route path="/recreationalPickup" element={<RecreationalPickup />} />
-          <Route path="/competitivePickup" element={<CompetitivePickup />} />
-        </Routes>
-        <HelpIcon message="Welcome to our sports booking website! You can join pickup games with no commitment, make new connections, and soon - join leagues." />
-      </div>
-    </Router>
+    <CartProvider>
+      <Router>
+        <div className="App">
+          <Navbar/>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/sports" element={<Sports/>} />
+            <Route path="/leagues" element={<Leagues/>} /> 
+            <Route path="/master-schedule" element={<MasterSchedule />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/forum" element={<Forum />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/registered" element={<Registered />} />
+            <Route path="/recreationalPickup" element={<RecreationalPickup />} />
+            <Route path="/competitivePickup" element={<CompetitivePickup />} />
+          </Routes>
+          <HelpIcon message="Welcome to our sports booking website! You can join pickup games with no commitment, make new connections, and soon - join leagues." />
+        </div>
+      </Router>
+    </CartProvider>
   );
 }
 
