@@ -1,0 +1,24 @@
+[
+    {
+      "id": 1,
+      "author": "Alex",
+      "title": "Looking for a sub for Wednesday's game",
+      "content": "Hey everyone, I need someone to cover for me this Wednesday at 7 PM. It's a beginner-level soccer game. Anyone interested?",
+      "date": "2024-03-24"
+    },
+    {
+      "id": 2,
+      "author": "Jordan",
+      "title": "Join our local tournament!",
+      "content": "We're organizing a local soccer tournament next month. Looking for more teams to join. Contact me for details!",
+      "date": "2024-03-22"
+    },
+    {
+      "id": 3,
+      "author": "Casey",
+      "title": "Tips for improving endurance?",
+      "content": "Does anyone have good tips or resources for improving endurance for soccer? Would love to hear what's worked for others.",
+      "date": "2024-03-20"
+    }
+  ]
+  
