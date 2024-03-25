@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import forumPostsData from './forumPosts.json';
 
 function NewPostModal({ isOpen, onClose, onSubmit }) {
@@ -53,12 +53,21 @@ function NewPostModal({ isOpen, onClose, onSubmit }) {
 }
 
 function Forum() {
-    const [modalOpen, setModalOpen] = useState(false);
-    const [forumPosts, setForumPosts] = useState(forumPostsData);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [forumPosts, setForumPosts] = useState(() => {
+    // Retrieve posts from localStorage if available; otherwise, load initial data
+    const savedPosts = localStorage.getItem('forumPosts');
+    return savedPosts ? JSON.parse(savedPosts) : forumPostsData;
+  });
 
-    const handleNewPost = (post) => {
-        setForumPosts(currentPosts => [post, ...currentPosts]);
-    };
+  useEffect(() => {
+    // Update localStorage whenever forumPosts changes
+    localStorage.setItem('forumPosts', JSON.stringify(forumPosts));
+  }, [forumPosts]);
+
+  const handleNewPost = (post) => {
+      setForumPosts(currentPosts => [post, ...currentPosts]);
+  };
 
     return (
         <div className='page'>
