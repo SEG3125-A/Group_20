@@ -9,6 +9,31 @@
     text-align: center;
 } */
 
+.checkout-button {
+    position: fixed;
+    top: 30%;
+    right: 20%; 
+    z-index: 999; 
+}
+
+.checkoutButton {
+    padding: 10px 30px;
+    background-color: #d0fd1b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.434);
+    transition: ease 0.2s;
+}
+
+.checkoutButton:hover {
+    background-color: #4d4d4d;
+    color: rgb(0, 0, 0);
+}
+
 .cartItem {
     /* margin-bottom: 20px; */
     border-bottom: 1px solid #eee;

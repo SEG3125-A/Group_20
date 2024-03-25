@@ -1,16 +1,17 @@
 .notification-form {
     margin: 40px;
     padding: 30px;
-    background-color: #494949;
+    background-color: #313131;
     border-radius: 8px;
     /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
-    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.434);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.473);
 }
 
 .notification-form h3 {
     margin-bottom: 10px;
     font-family: 'Poppins', sans-serif;
     font-size: large;
+    color: white;
 }
 
 .notification-form form {
@@ -34,6 +35,7 @@
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-weight: bold;
 }
 
 .notification-form button[type="submit"]:hover {

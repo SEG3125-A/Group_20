@@ -1,6 +1,6 @@
 import React from 'react';
 import { useCart } from './CartContext';
-import { toast } from 'react-toastify';
+import { Link } from 'react-router-dom';
 import './cart.css';
 
 function Cart() {
@@ -9,6 +9,18 @@ function Cart() {
     const handleRemoveFromCart = (index) => {
         removeFromCart(index);
     };
+
+    const calculateTotal = () => {
+        let total = 0;
+        cart.forEach(item => {
+            if (item.cost) {
+                total += parseFloat(item.cost);
+            }
+        });
+        return total.toFixed(2);
+    };
+
+    const total = calculateTotal();
 
     return (
         <div className='page'>
@@ -35,6 +47,9 @@ function Cart() {
                         ))}
                     </div>
                 )}
+            </div>
+            <div className='checkout-button'>
+                <Link to={{ pathname: "/checkout", state: { total } }} className="checkoutButton">Checkout</Link>
             </div>
         </div>
     );

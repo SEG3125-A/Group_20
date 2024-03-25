@@ -10,6 +10,7 @@ import Sports from './components/Navbar/sports.js';
 import Leagues from './components/Navbar/leagues.js';
 import MasterSchedule from './components/Navbar/masterSchedule.js';
 import Login from './components/Navbar/login.js';
+import Checkout from './components/Navbar/Checkout.js';
 import Register from './components/Navbar/register.js';
 import Registered from './components/Navbar/registered.js';
 import RecreationalPickup from './components/Navbar/recreationalPickup.js';
@@ -33,6 +34,7 @@ function App() {
             <Route path="/master-schedule" element={<MasterSchedule />} />
             <Route path="/login" element={<Login />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/checkout" element={<Checkout />} />
             <Route path="/forum" element={<Forum />} />
             <Route path="/register" element={<Register />} />
             <Route path="/registered" element={<Registered />} />
