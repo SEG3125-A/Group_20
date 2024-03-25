@@ -27,7 +27,9 @@ function NewPostModal({ isOpen, onClose, onSubmit }) {
     padding: '20px',
     zIndex: 1000,
     borderRadius: '8px',
-    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+    boxShadow: '2px 4px 6px rgba(0, 0, 0, 0.1)',
+    outlineStyle: 'solid '
+    
   };
 
   const inputStyle = {
@@ -55,13 +57,11 @@ function NewPostModal({ isOpen, onClose, onSubmit }) {
 function Forum() {
   const [modalOpen, setModalOpen] = useState(false);
   const [forumPosts, setForumPosts] = useState(() => {
-    // Retrieve posts from localStorage if available; otherwise, load initial data
     const savedPosts = localStorage.getItem('forumPosts');
     return savedPosts ? JSON.parse(savedPosts) : forumPostsData;
   });
 
   useEffect(() => {
-    // Update localStorage whenever forumPosts changes
     localStorage.setItem('forumPosts', JSON.stringify(forumPosts));
   }, [forumPosts]);
 
@@ -73,7 +73,7 @@ function Forum() {
         <div className='page'>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingBottom: '50px' }}>
                 <h2>Discussion Board</h2>
-                <button onClick={() => setModalOpen(true)} style={{ backgroundColor: '#007bff', color: 'white', border: 'none', padding: '10px 20px', borderRadius: '5px' }}>Add Question</button>
+                <button onClick={() => setModalOpen(true)} style={{ backgroundColor: '#d0fd1b', color: 'black', border: 'none', padding: '10px 20px', borderRadius: '5px',fontWeight:'bold',boxShadow:'3px 3px 4px rgba(0, 0, 0, 0.434)' }}>Add Question</button>
             </div>
             <NewPostModal isOpen={modalOpen} onClose={() => setModalOpen(false)} onSubmit={handleNewPost} />
             {forumPosts.map((post, index) => (
