@@ -1,0 +1,102 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2759
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab560
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+
+\f0\fs26 \cf0 \
+#include <stdio.h>\
+#include <stdlib.h>\
+#include <unistd.h>\
+#include <sys/wait.h>\
+\
+void handle_error(const char *msg) \{\
+    perror(msg);\
+    exit(EXIT_FAILURE);\
+\}\
+\
+void create_pipe(int pipefd[2]) \{\
+    if (pipe(pipefd) == -1) \{\
+        handle_error("pipe");\
+    \}\
+\}\
+\
+void execute_program(const char *program, int input_fd, int output_fd) \{\
+    if (input_fd != STDIN_FILENO) \{\
+        if (dup2(input_fd, STDIN_FILENO) == -1) \{\
+            handle_error("dup2 input_fd");\
+        \}\
+        close(input_fd);\
+    \}\
+    if (output_fd != STDOUT_FILENO) \{\
+        if (dup2(output_fd, STDOUT_FILENO) == -1) \{\
+            handle_error("dup2 output_fd");\
+        \}\
+        close(output_fd);\
+    \}\
+    execlp(program, program, (char *)NULL);\
+    handle_error("execlp");\
+\}\
+\
+void close_pipes(int pipefds[][2], int num_pipes) \{\
+    for (int i = 0; i < num_pipes; ++i) \{\
+        close(pipefds[i][0]);\
+        close(pipefds[i][1]);\
+    \}\
+\}\
+\
+void doublePipe() \{\
+    int pipe1[2], pipe2[2], pipe3[2];\
+    pid_t child1, child2, child3;\
+\
+    create_pipe(pipe1);\
+    create_pipe(pipe2);\
+    create_pipe(pipe3);\
+\
+    if ((child1 = fork()) == -1) \{\
+        handle_error("fork child1");\
+    \}\
+\
+    if (child1 == 0) \{\
+        close(pipe1[0]);\
+        close(pipe2[0]); close(pipe2[1]);\
+        close(pipe3[0]);\
+        execute_program("program1", STDIN_FILENO, pipe1[1]);\
+    \}\
+\
+    if ((child2 = fork()) == -1) \{\
+        handle_error("fork child2");\
+    \}\
+\
+    if (child2 == 0) \{\
+        close(pipe1[1]);\
+        close(pipe3[0]); close(pipe3[1]);\
+        execute_program("program2", pipe1[0], pipe2[1]);\
+    \}\
+\
+    if ((child3 = fork()) == -1) \{\
+        handle_error("fork child3");\
+    \}\
+\
+    if (child3 == 0) \{\
+        close(pipe1[1]);\
+        close(pipe2[0]); close(pipe2[1]);\
+        execute_program("program3", pipe3[0], STDOUT_FILENO);\
+    \}\
+\
+    // Parent process closes all ends of the pipes\
+    close_pipes((int[][2])\{pipe1, pipe2, pipe3\}, 3);\
+\
+    // Wait for child processes to finish\
+    waitpid(child1, NULL, 0);\
+    waitpid(child2, NULL, 0);\
+    waitpid(child3, NULL, 0);\
+\}\
+\
+int main() \{\
+    doublePipe();\
+    return 0;\
+\}\
+}
